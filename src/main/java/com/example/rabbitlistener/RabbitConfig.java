@@ -15,11 +15,11 @@ import org.springframework.stereotype.Component;
 public class RabbitConfig {
 
     private static final String TEST_QUEUE = "MyTestQueue";
-    private static final String TEST_EXCHANGE = "myTestExchange";
+    private static final String TEST_EXCHANGE = "MyTestExchange";
 
     @Bean
     Queue myTestQueue() {
-        return new Queue(TEST_QUEUE, false);
+        return new Queue(TEST_QUEUE, true);
     }
 
     @Bean
